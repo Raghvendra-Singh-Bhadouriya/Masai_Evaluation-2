@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function ReportCard(name, rollNo, className, section, science, socialScience, maths, english, hindi) {
+    this.name = name;
+    this.rollNo = rollNo;
+    this.className = className;
+    this.section = section;
+    this.science = science;
+    this.socialScience = socialScience;
+    this.maths = maths;
+    this.english = english;
+    this.hindi = hindi;
+    this.calculatePercentage = function () {
+        let totalMarks = this.science + this.socialScience + this.maths + this.english + this.hindi;
+        return (totalMarks / 500) * 100;
+    };
+    this.printReportCard = function () {
+        console.log("+---------------------+");
+        console.log("|     REPORT CARD     |");
+        console.log("+---------------------+");
+        console.log("| Name     - " + this.name + "    |");
+        console.log("| Roll no. - " + this.rollNo + "       |");
+        console.log("| Class    - " + this.className + "        |");
+        console.log("| Section  - " + this.section + "        |");
+        console.log("| Science  - " + this.science + "       |");
+        console.log("| S.Sc     - " + this.socialScience + "       |");
+        console.log("| Maths    - " + this.maths + "       |");
+        console.log("| English  - " + this.english + "       |");
+        console.log("| Hindi    - " + this.hindi + "       |");
+        console.log("| Percentage - " + this.calculatePercentage() + " % |");
+        console.log("+---------------------+");
+    };
+}
+let raghvendraReport = new ReportCard("Akash", 16, "X", "A", 72, 79, 75, 80, 67);
+raghvendraReport.printReportCard();
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
